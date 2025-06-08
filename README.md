@@ -1,38 +1,56 @@
-# coding-take-home
+## Tech Stack
 
-## Overview
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Recharts](https://recharts.org/) – for data visualization
+- [react-virtualized](https://github.com/bvaughn/react-virtualized) – for efficient list rendering
+- [@headlessui/react](https://headlessui.com/) – for accessible, unstyled UI primitives
+- [lucide-react](https://lucide.dev/) – for beautiful, customizable icons
 
-This is a relatively simple take home test for us to assess your general knowledge of setting up a basic app.
+## Features
 
-We are looking for an overall understanding of React, Typescript, and general app design.
+- **Search and Filter**: Find all users by color or language
+- **Group by Country & Color**: View users organized and visualized by country and color.
 
-The instructions on how to run the application locally is in the README file in the take-home folder.
+## Middleware logic
+#### `fetchData(): User[]`
+Returns the full list of users from `MOCK_DATA.json`.
 
-You are free to add a better file structure, but this task should really only need edits to the files App.tsx, and middleware.ts.
+#### `fetchListingsByAttribute(attribute: FilterOptions, value: string): User[]`
+Filters user listings by a given attribute (`color` or `language`) and value.
 
-To complete this challenge, please fork this repository and build your own code, then share a link to your version of the repository with some screenshots of the app working locally.
+**Params:**
+- `attribute`: `"color"` | `"language"`
+- `value`: the string value to match (case-insensitive)
 
-## Task
+**Returns:** Filtered list of users.
 
-### Part One
+#### `fetchGroups(): GraphInfo`
+Groups all user listings by `country` and `color`, and returns counts and users for each group.
 
-In the mock-data folder, there is a json which is meant to represent an API call from the backend. You are to build a middleware to fetch this data, and conduct some light processing for the front end. 
+**Returns:**
+```ts
+{
+  countries: Array<{ name: string, count: number, users: User[] }>,
+  colors: Array<{ name: string, count: number, users: User[] }>
+}
+```
 
-This should minimally include three key fetch calls
+## Screenshots
 
-1) Return an array of listings of a particular color or language
+#### Search
+<img width="1439" alt="Screenshot 2025-06-09 at 12 10 24 AM" src="https://github.com/user-attachments/assets/90805b7b-a7e9-4cc4-a1be-98ebb3f27e71" />
 
-2) Return an array of listings of all countries represented in the database
+#### Countries Graph
+<img width="1431" alt="Screenshot 2025-06-09 at 12 10 51 AM" src="https://github.com/user-attachments/assets/45fa474c-c89d-4c35-8b60-b27c49f9e18f" />
 
-3) Return an array of all listings which have a null value of a particular key like color or language.
+#### Graph Modal
+<img width="1430" alt="Screenshot 2025-06-09 at 12 11 13 AM" src="https://github.com/user-attachments/assets/d61b3b2b-f67b-4803-9b13-b1f10c348230" />
+
+#### Color Graph
+<img width="1427" alt="Screenshot 2025-06-09 at 12 11 33 AM" src="https://github.com/user-attachments/assets/fa081b09-6b41-4df0-bd37-867fe649ee5b" />
+
+#### Summary
+<img width="1430" alt="Screenshot 2025-06-09 at 12 11 47 AM" src="https://github.com/user-attachments/assets/46b02f02-0344-453e-aa2f-e8a3a923f121" />
 
 
-### Part Two
-
-Once you have all your fetch calls, you will build a single page application to show the results of these fetch calls in a way that makes the most sense to you. This is a test of not only your understanding of front end development, but a general understanding of UI and UX. We are looking for an app that someone could jump in cold and immediately understand how to use.
-
-This UI should minimally include but is not limited to the following basic features.
-
-- The ability to search and display all listings of a particular color or language.
-- A way to visualize each listing grouped by country.
-- A way to display the number of listings which does not have data on the searched category.
