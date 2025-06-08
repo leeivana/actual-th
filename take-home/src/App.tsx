@@ -1,14 +1,11 @@
-import { fetchData } from './middleware/middleware.ts'
+import ListingsView from "./components/ListingsView";
 
 function App() {
-
-  fetchData();
-
-  return (
-    <>
-      <h1>ACTUAL take home test</h1>
-    </>
-  )
+    return (
+        <div className="min-h-screen bg-gray-50">
+            <ListingsView />
+        </div>
+    );
 }
 
-export default App
+export default App;
