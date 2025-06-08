@@ -1,9 +1,6 @@
 ### Description
 React app that allows users to search and analytize data (no backend, everything is handled in-memory using a local JSON dataset)
 
-#### Summary
-<img width="1430" alt="Screenshot 2025-06-09 at 12 11 47 AM" src="https://github.com/user-attachments/assets/46b02f02-0344-453e-aa2f-e8a3a923f121" />
-
 #### Search
 <img width="1439" alt="Screenshot 2025-06-09 at 12 10 24 AM" src="https://github.com/user-attachments/assets/90805b7b-a7e9-4cc4-a1be-98ebb3f27e71" />
 
@@ -15,6 +12,10 @@ React app that allows users to search and analytize data (no backend, everything
 
 #### Color Graph
 <img width="1427" alt="Screenshot 2025-06-09 at 12 11 33 AM" src="https://github.com/user-attachments/assets/fa081b09-6b41-4df0-bd37-867fe649ee5b" />
+
+#### Summary
+<img width="1430" alt="Screenshot 2025-06-09 at 12 11 47 AM" src="https://github.com/user-attachments/assets/46b02f02-0344-453e-aa2f-e8a3a923f121" />
+
 
 ## Tech Stack
 
