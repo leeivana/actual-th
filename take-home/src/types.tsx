@@ -41,3 +41,10 @@ export interface GraphInfo {
     colors: GraphData[];
     countries: GraphData[];
 }
+
+export interface TotalCounts {
+    users: number;
+    countries: number;
+    colors: number;
+    languages: number;
+}

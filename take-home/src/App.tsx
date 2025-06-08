@@ -1,4 +1,4 @@
-import { ListingsView } from "./components/ListingsView";
+import ListingsView from "./components/ListingsView";
 
 function App() {
     return (
